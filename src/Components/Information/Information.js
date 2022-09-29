@@ -47,11 +47,19 @@ const Information = () => {
                 </div>
                 <h2>Add a break</h2>
                 <div className='break-time'>
-                    <p>15m</p>
-                    <p>10m</p>
-                    <p>5m</p>
-                    <p>20m</p>
+                    <h5>15m</h5>
+                    <h5>10m</h5>
+                    <h5>5m</h5>
+                    <h5>20m</h5>
                 </div>
+                <h2>Exercise Details</h2>
+                <div className='exc-time'>
+                    <p>Exercise Time: </p>
+                </div>
+                <div className='break-total-time'>
+                    <p>Break-time: </p>
+                </div>
+                <button className='active-btn'><h4>Activity Completed</h4></button>
             </div>
         </div>
         </div>

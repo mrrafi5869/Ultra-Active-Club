@@ -3,8 +3,10 @@
     width: 400px;
     height: 550px;
     padding: 10px;
+    border: none;
     border-radius: 10px;
     position: relative;
+    box-shadow:3px 3px 20px gray;;
 }
 .category img{
     width: 400px;
