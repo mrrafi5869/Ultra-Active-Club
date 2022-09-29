@@ -6,13 +6,7 @@ import './Information.css';
 const Information = () => {
     const [categories, setCategories] = useState([]);
     const [times, setTimes] = useState([]);
-    // const [breaks, setBreaks] = useState([])
-
-    // useEffect(() => {
-    //     fetch("break.json")
-    //     .then(res => res.json())
-    //     .then(data => setBreaks(data))
-    // } , [])
+    
     // {
     //     breaks.map(breakTime => console.log(breakTime))
     // }
