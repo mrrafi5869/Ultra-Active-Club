@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import myPic from '../../images/Rafi.jpg';
 import './Details.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Details = (props) => {
     const {times} = props;
+    const [breaks, setBreaks] = useState([]);
+
+    useEffect(() => {
+        fetch("break.json")
+        .then(res => res.json())
+        .then(data => setBreaks(data))
+    } , [])
 
     let total = 0;
     for(const time of times){
         total = total + time.time;
+    }
+    const notify = () => {
+        toast("Yeah.Alhamdulillah done.")
     }
     return (
         <div>
@@ -23,18 +35,17 @@ const Details = (props) => {
                         <h4>56 <small>kg</small><br/>weight</h4>
                     </div>
                     <div>
-                        <h4>6.5<br/> <small>height</small></h4>
+                        <h4>5.9inch<br/> <small>height</small></h4>
                     </div>
                     <div>
-                        <h4>25 <small>years</small><br/>age</h4>
+                        <h4>19 <small>years</small><br/>age</h4>
                     </div>
                 </div>
                 <h2>Add a break</h2>
                 <div className='break-time'>
-                    <h5>15m</h5>
-                    <h5>10m</h5>
-                    <h5>5m</h5>
-                    <h5>20m</h5>
+                    {
+                        breaks.map(breakTime => <h5>{breakTime.time}</h5>)
+                    }
                 </div>
                 <h2>Exercise Details</h2>
                 <div className='exc-time'>
@@ -43,7 +54,8 @@ const Details = (props) => {
                 <div className='break-total-time'>
                     <p>Break-time: </p>
                 </div>
-                <button className='active-btn'><h4>Activity Completed</h4></button>
+                <button onClick={notify} className='active-btn'><h4>Activity Completed</h4></button>
+                <ToastContainer></ToastContainer>
         </div>
     );
 };

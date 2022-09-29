@@ -1,18 +1,18 @@
 [
     {
         "id": 1,
-        "time": "15minute"
+        "time": "15m"
     },
     {
         "id": 2,
-        "time": "25minute"
+        "time": "25m"
     },
     {
         "id": 1,
-        "time": "35minute"
+        "time": "35m"
     },
     {
         "id": 1,
-        "time": "45minute"
+        "time": "45m"
     }
 ]
