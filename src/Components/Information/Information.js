@@ -4,13 +4,19 @@ import myPic from '../../../src/images/Rafi.jpg'
 import './Information.css';
 
 const Information = () => {
-    const [categories, setCategories] = useState([])
+    const [categories, setCategories] = useState([]);
+    const [time, setTime] = useState([]);
 
     useEffect(() => {
         fetch("gymData.json")
         .then(res => res.json())
         .then(data => setCategories(data))
     } , [])
+
+    const addTime = minute => {
+        const newTime = [...time, minute]
+        setTime(newTime)
+    }
     return (
         <div>
             <h3 className='headline'>Select Today's Exercise</h3>
@@ -23,6 +29,7 @@ const Information = () => {
                     name = {category.name}
                     details = {category.details}
                     time = {category.time}
+                    addTime = {addTime(category.time)}
                     ></Categories>)
                 }
             </div>
@@ -54,7 +61,7 @@ const Information = () => {
                 </div>
                 <h2>Exercise Details</h2>
                 <div className='exc-time'>
-                    <p>Exercise Time: </p>
+                    <p>Exercise Time: <small>0</small> minute</p>
                 </div>
                 <div className='break-total-time'>
                     <p>Break-time: </p>
