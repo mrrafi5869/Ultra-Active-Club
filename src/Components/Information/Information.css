@@ -1,0 +1,16 @@
+.info{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    margin-left: 180px;
+}
+.categories{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    height: auto;
+}
+.details{
+    background-color: antiquewhite;
+    width: 500px;
+    height: 100%;
+}

@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-left: 180px;
+}
+.dumbbell{
+    width: 100px;
+    height: auto;
+    margin-right: 25px;
+}
+.header h1{
+    color: orange;
+}

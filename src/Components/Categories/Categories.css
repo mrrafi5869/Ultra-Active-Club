@@ -1,0 +1,8 @@
+.category{
+    border: 1px solid gray;
+    width: 400px;
+}
+.category img{
+    width: 400px;
+    height: 250px;
+}
