@@ -1,11 +1,27 @@
 .category{
     border: 1px solid gray;
     width: 400px;
+    height: 550px;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
+    position: relative;
 }
 .category img{
     width: 400px;
     height: 250px;
     border-radius: 20px;
+}
+.category button{
+    width: 100%;
+    background-color: bisque;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: none;
+    border-radius: 0 0px 10px 10px;
+    transition: 0.4s;
+}
+.category button:hover{
+    background-color: orange;
 }

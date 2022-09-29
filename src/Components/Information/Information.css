@@ -4,6 +4,9 @@
     margin-left: 180px;
     gap: 15px;
 }
+.headline{
+    margin-left: 180px;
+}
 .categories{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -11,7 +14,29 @@
     height: auto;
 }
 .details{
+    padding: 10px;
     background-color: antiquewhite;
-    width: 500px;
+    width: 100%;
     height: 100%;
+}
+.my-details{
+    display: flex;
+}
+.details img{
+    width: 90px;
+    height: auto;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
+.customer-info{
+    background-color: beige;
+    height: 100px;
+    width: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
 }

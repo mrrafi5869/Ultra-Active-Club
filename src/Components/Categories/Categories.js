@@ -6,7 +6,8 @@ const Categories = ({img, name, details, time}) => {
             <img src={img} alt="" />
             <h3>{name}</h3>
             <p>{details}</p>
-            <p>Time required:{time}</p>
+            <h3>Time required:{time} minute</h3>
+            <button>Add to List</button>
         </div>
     );
 };
