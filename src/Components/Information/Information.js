@@ -5,8 +5,17 @@ import './Information.css';
 
 const Information = () => {
     const [categories, setCategories] = useState([]);
-    const [time, setTime] = useState([]);
+    const [times, setTimes] = useState([]);
+    // const [breaks, setBreaks] = useState([])
 
+    // useEffect(() => {
+    //     fetch("break.json")
+    //     .then(res => res.json())
+    //     .then(data => setBreaks(data))
+    // } , [])
+    // {
+    //     breaks.map(breakTime => console.log(breakTime))
+    // }
     useEffect(() => {
         fetch("gymData.json")
         .then(res => res.json())
@@ -15,8 +24,8 @@ const Information = () => {
 
     const addTime = minute => {
     //    console.log(minute);
-       const newTime = [...time, minute];
-       setTime(newTime);
+       const newTime = [...times, minute];
+       setTimes(newTime);
     }
     return (
         <div>
@@ -35,9 +44,9 @@ const Information = () => {
                 }
             </div>
             <div className="details">
-                <p>Selected items: {time.length}</p>
+                <h1>details; {times.length}</h1>
                 <Details
-                    addTime = {addTime}
+                    times = {times}
                 ></Details>
             </div>
         </div>

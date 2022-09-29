@@ -3,7 +3,12 @@ import myPic from '../../images/Rafi.jpg';
 import './Details.css'
 
 const Details = (props) => {
-    const {addTime} = props;
+    const {times} = props;
+
+    let total = 0;
+    for(const time of times){
+        total = total + time.time;
+    }
     return (
         <div>
             <div className='my-details'>
@@ -33,7 +38,7 @@ const Details = (props) => {
                 </div>
                 <h2>Exercise Details</h2>
                 <div className='exc-time'>
-                    <p>Exercise Time: {addTime} minute</p>
+                    <p>Exercise Time: {total} minute</p>
                 </div>
                 <div className='break-total-time'>
                     <p>Break-time: </p>
