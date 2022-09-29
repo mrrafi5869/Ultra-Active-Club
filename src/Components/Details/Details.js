@@ -24,6 +24,7 @@ const Details = (props) => {
     }
     const addToBreakContainer = (breakTime) => {
         setSecond(breakTime);
+        localStorage.setItem(breakTime, "break time")
     }
     return (
         <div>
