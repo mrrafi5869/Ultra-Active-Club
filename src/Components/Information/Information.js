@@ -5,7 +5,7 @@ import './Information.css';
 
 const Information = () => {
     const [categories, setCategories] = useState([]);
-    // const [time, setTime] = useState([]);
+    const [time, setTime] = useState([]);
 
     useEffect(() => {
         fetch("gymData.json")
@@ -14,7 +14,9 @@ const Information = () => {
     } , [])
 
     const addTime = minute => {
-       console.log(minute)
+    //    console.log(minute);
+       const newTime = [...time, minute];
+       setTime(newTime);
     }
     return (
         <div>
@@ -28,13 +30,14 @@ const Information = () => {
                     name = {category.name}
                     details = {category.details}
                     time = {category.time}
-                    addTime = {addTime(category.time)}
+                    addTime = {addTime}
                     ></Categories>)
                 }
             </div>
             <div className="details">
+                <p>Selected items: {time.length}</p>
                 <Details
-                addTime = {addTime}
+                    addTime = {addTime}
                 ></Details>
             </div>
         </div>

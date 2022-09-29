@@ -7,7 +7,7 @@ const Details = (props) => {
     return (
         <div>
             <div className='my-details'>
-                    <img src={myPic} alt="" />
+                    <img src={myPic} alt="" /> 
                     <div>
                     <h2>Mohammad Rafi</h2>
                     <p><h4>Bangladesh, Chittagong</h4></p>
@@ -33,7 +33,7 @@ const Details = (props) => {
                 </div>
                 <h2>Exercise Details</h2>
                 <div className='exc-time'>
-                    <p>Exercise Time: {() => addTime()} minute</p>
+                    <p>Exercise Time: {addTime} minute</p>
                 </div>
                 <div className='break-total-time'>
                     <p>Break-time: </p>
