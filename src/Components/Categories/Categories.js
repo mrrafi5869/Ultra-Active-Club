@@ -4,9 +4,9 @@ const Categories = ({img, name, details, time}) => {
     return (
         <div className='category'>
             <img src={img} alt="" />
-            <h3>name : {name}</h3>
+            <h3>{name}</h3>
             <p>{details}</p>
-            <p>{time}</p>
+            <p>Time required:{time}</p>
         </div>
     );
 };

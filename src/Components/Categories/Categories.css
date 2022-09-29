@@ -1,8 +1,11 @@
 .category{
     border: 1px solid gray;
     width: 400px;
+    padding: 10px;
+    border-radius: 20px;
 }
 .category img{
     width: 400px;
     height: 250px;
+    border-radius: 20px;
 }
