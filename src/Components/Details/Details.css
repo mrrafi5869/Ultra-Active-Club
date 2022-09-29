@@ -1,0 +1,62 @@
+.my-details{
+    display: flex;
+}
+.customer-info{
+    background-color: beige;
+    height: 100px;
+    width: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.break-time{
+    background-color: beige;
+    height: 100px;
+    width: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.break-time h5{
+    background-color: aqua;
+    border-radius: 100%;
+    padding: 15px;
+}
+.exc-time{
+    background-color: beige;
+    height: 100px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.break-total-time{
+    background-color: beige;
+    height: 100px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.active-btn{
+    margin-top: 20px;
+    width: 100%;
+    width: 380px;
+    background-color: aqua;
+}
