@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Details = (props) => {
     const {times} = props;
     const [breaks, setBreaks] = useState([]);
+    const [second, setSecond] = useState([]);
 
     useEffect(() => {
         fetch("break.json")
@@ -20,6 +21,9 @@ const Details = (props) => {
     }
     const notify = () => {
         toast("Yeah.Alhamdulillah done.")
+    }
+    const addToBreakContainer = (breakTime) => {
+        setSecond(breakTime);
     }
     return (
         <div>
@@ -44,7 +48,7 @@ const Details = (props) => {
                 <h2>Add a break</h2>
                 <div className='break-time'>
                     {
-                        breaks.map(breakTime => <h5>{breakTime.time}</h5>)
+                        breaks.map(breakTime => <h5 onClick={() => addToBreakContainer(breakTime.time)}>{breakTime.time}</h5>)
                     }
                 </div>
                 <h2>Exercise Details</h2>
@@ -52,7 +56,7 @@ const Details = (props) => {
                     <p>Exercise Time: {total} minute</p>
                 </div>
                 <div className='break-total-time'>
-                    <p>Break-time: </p>
+                    <p>Break-time: {second}</p>
                 </div>
                 <button onClick={notify} className='active-btn'><h4>Activity Completed</h4></button>
                 <ToastContainer></ToastContainer>
